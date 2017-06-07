@@ -7,7 +7,7 @@ s.license      = 'MIT'
 s.author       = {'suxx' => '13751882497.com'}
 s.source       = { :git => 'https://github.com/xingshuaiEducation/XSBreakthroughtModule.git'}
 s.platform     = :ios
-s.source_files = 'XSBreakthrought/**/*.{h,m}'
-s.resources    = 'XSBreakthrought/Resource/*.{png}'
+s.source_files = 'XSBreakthroughtModule/**/*.{h,m}'
+s.resources    = 'XSBreakthroughtModule/Resource/*.{png}'
 #s.frameworks = '*.helloFramework/helloFramework'
 end
