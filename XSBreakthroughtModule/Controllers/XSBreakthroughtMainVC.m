@@ -12,6 +12,7 @@
 #import "XSBIntroduceView.h"
 #import "XSBreakthroughtManager.h"
 #import "XSBTipView.h"
+#import "XSBreakthroughtUtil.h"
 
 //以iphone6为参考
 #define ScreenScaleX(x) x*[UIScreen mainScreen].bounds.size.width/375.0
@@ -71,7 +72,7 @@
         bivc.breakthroughtCondition = @"关卡分数达80%";
         bivc.breakthroughtedMans = @"高露洁，佳洁士等7位同学";
         bivc.bottomMenu = @[@"icon_Breakthrought_待解锁", @"icon_Breakthrought_重新闯关"];
-        __weak typeof(self) weakSelf = self;
+        WeakSelf(self);
         [bivc mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.bottom.left.right.equalTo(weakSelf.view);
         }];
@@ -106,7 +107,7 @@
     NSString *imagePath = [[NSBundle mainBundle] pathForResource:imageName ofType:@"png"];
     bgImageView.image = [UIImage imageWithContentsOfFile:imagePath];
     
-    __weak typeof(self) weakSelf = self;
+    WeakSelf(self);
     [bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.left.right.equalTo(weakSelf.view);
     }];
